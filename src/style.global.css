@@ -1,0 +1,287 @@
+* {
+  -moz-user-select: none;
+   -khtml-user-select: none;
+   -webkit-user-select: none;
+   -ms-user-select: none;
+   user-select: none;
+}
+
+html, body {
+  display: block;
+  height: -webkit-fill-available;
+}
+
+body {
+  font-family: 'Inconsolata-Light';
+  margin: 0px;
+  padding: 0px;
+  background-color: beige;
+  display: block;
+  width: -webkit-fill-available;
+  height: -webkit-fill-available;
+}
+
+
+@keyframes loadingOut {
+  0% {
+    opacity: 1;
+  }
+  80% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0; 
+  }
+}
+
+#root {
+  height: 100%;
+}
+
+#loading {
+  z-index: 3;
+  display: block;
+  width: 100vw;
+  height: 100vh;
+  background: black;
+  position: absolute;
+  animation: 3s loadingOut;
+
+}
+
+#loading .inner {
+  position: inherit;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+#loading .inner p {
+  color: white;
+  font-size: 2em;
+  font-family: 'Inconsolata-Black';
+  margin-bottom: 0;
+}
+
+#loading .inner span {
+  color: #ffffff59;
+  font-size: .8em;
+  font-family: 'Inconsolata-Light';
+}
+
+@font-face {
+  font-family: 'Inconsolata-Light';
+  src: url('fonts/Inconsolata_Condensed-Light.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Inconsolata-Bold';
+  src: url('fonts/Inconsolata_Condensed-Bold.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Inconsolata-Black';
+  src: url('fonts/Inconsolata_Condensed-Black.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Inconsolata-ExtraLight';
+  src: url('fonts/Inconsolata_Condensed-ExtraLight.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Inconsolata-Regular';
+  src: url('fonts/Inconsolata_Condensed-Regular.ttf') format('truetype');
+}
+
+.comment {
+  color: gray
+}
+
+.logo {
+  position: fixed;
+  left: 2em;
+  top: 2em;
+  color: white;
+  font-size: 2vw;
+  font-family: 'Inconsolata-Black';
+}
+
+section {
+  display: block;
+  height: 100%;
+  width: 100%;
+}
+
+html {
+  overflow: hidden;
+}
+
+.link {
+  text-decoration: underline;
+  transition: .25s;
+  cursor: pointer;
+}
+
+.link:hover {
+  color: #fff;
+}
+
+.menu-link {
+  position: fixed;
+  font-size: 1vw;
+  color: #00000078;
+  right: 1em;
+  bottom: 0;
+  background: #00000021;
+  padding: .3em;
+  transition: .25s;
+  cursor: pointer;
+}
+
+.menu-link:hover {
+  background-color: black;
+  color: white;
+}
+
+.comment {
+  display: block;
+  font-size: 1vw;
+  color: #929292;
+  font-family: 'Inconsolata-Regular';
+  font-style: italic;
+}
+
+.comment.single {
+  background: #ffffff14;
+  height: .7em;
+  padding-left: .5em;
+  padding-right: .5em;
+  width: 20vw;
+  text-align: center;
+}
+
+.info {
+  position: absolute;
+  width: 40vw;
+}
+
+.multi {
+  color: #929292;
+  display: table-header-group;
+  line-height: 1em;
+}
+
+.multi span.bolder {
+  color: #ff7c2f;
+  font-family: 'Inconsolata-Black';
+}
+
+.to-left {
+  display: inline-block;
+  width: -webkit-fill-available;
+  font-size: 2em;
+  background: #000;
+  height: -webkit-fill-available;
+  color: white;
+  letter-spacing: 1px;
+  line-height: 0em;
+}
+
+.to-left.about {
+  background: rgb(50 44 58);
+}
+
+.to-left.work {
+  background: rgb(28 18 29);
+}
+
+.to-left.contact {
+  background: rgb(25 4 18);
+}
+
+.to-left .inner {
+  position: relative;
+  top: 40%;
+  transform: translateY(-50%);
+  left: 30%;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+
+.to-left .inner.about {
+  top: 25%;
+}
+
+.to-left .inner p:first-of-type {
+  margin-top: .7em!important;
+}
+
+.to-left .inner p::first-letter {
+  font-family: 'Inconsolata-Bold';
+}
+
+.to-left .inner p {
+  height: auto;
+  display: block;
+  font-size: 4vw;
+  font-family: 'Inconsolata-ExtraLight';
+}
+
+.to-right {
+  display: inline-block;
+  width: 80vw;
+  background: #fff;
+  color: white;
+  transform: rotate(20deg);
+  position: fixed;
+  right: -62vw;
+  height: 130vh;
+  top: 10vh;
+}
+
+.to-right .items {
+  position: absolute;
+  left: -2%;
+  top: 50%;
+}
+
+.to-right .items .item {
+  color: #b7b7b7;
+  font-size: 2vw;
+  transform: rotate(-20deg);
+  padding-left: 1em;
+  padding-right: 1em;
+  transition: .25s;
+  cursor: pointer;
+}
+
+.eblock {
+  display: block;
+  width: 2em;
+  height: 2em;
+  background: white;
+  position: absolute;
+  left: 5.5em;
+  top: 0em;
+  transform: rotate(20deg);
+  cursor: initial;
+}
+
+.to-right .items .item::before {
+  position: relative;
+  display: block;
+  width: 1em;
+  height: 1em;
+}
+
+.to-right .items .item:hover {
+  color: black;
+}
+
+.to-right .items .item.active {
+  color: black;
+  font-style: italic;
+}

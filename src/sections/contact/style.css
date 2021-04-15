@@ -1,0 +1,48 @@
+.my-works {
+  display: block;
+  height: auto;
+}
+
+.my-works .item:first-of-type {
+  margin-top: 1em;
+}
+
+.my-works .item {
+  font-size: 1.5vw!important;
+  display: block;
+  width: 20vw;
+  padding: .3em;
+  background: #ffffff0a;
+  margin-top: .2em;
+  cursor: pointer;
+  transition: .25s;
+  padding-bottom: .15em;
+}
+
+.my-works .item:hover {
+  background: #ffffff1e
+}
+
+.my-works .item p.title {
+  font-size: .6em;
+  display: inline-block;
+}
+
+.my-works .item p.title::first-letter {
+  font-family: inherit;
+}
+
+.my-works .item .tags {
+  display: inline-block;
+  font-size: 0.4em;
+  float: right;
+  line-height: 2em;
+}
+
+.my-works .item .tags span {
+  margin-left: .5em;
+  margin-right: .5em;
+  background: #ffffff1f;
+  padding: .3em;
+  color: #ffffff70;
+}
